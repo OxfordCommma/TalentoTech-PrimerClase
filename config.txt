@@ -1,0 +1,199 @@
+========================================
+CONFIGURACIÓN DE PC PARA DESARROLLO
+========================================
+
+
+1. VISUAL STUDIO CODE
+=====================
+
+Instalar Visual Studio Code.
+
+2. NODE.JS
+==========
+
+Instalar Node.js.
+
+Comprobar la instalación desde la terminal:
+
+node --version v24.20.0
+npm --version 11.19.0
+
+3. GIT
+======
+
+Instalar Git for Windows.
+
+Durante la instalación:
+
+- Editor:
+  Se puede elegir Visual Studio Code.
+  Si no aparece VS Code normal, también se puede dejar Vim y cambiarlo
+  posteriormente.
+
+Después de instalar Git, cerrar y volver a abrir VS Code.
+
+
+4. COMPROBAR GIT
+================
+
+Desde la terminal de VS Code:
+
+git --version // git version 2.55.0.windows.5
+
+
+5. CONFIGURAR GIT (desde VSC)
+=================
+
+Configurar nombre:
+
+git config --global user.name "Nombre Apellido"
+
+Configurar email:
+
+git config --global user.email "correo@ejemplo.com"
+
+Comprobar configuración:
+
+git config --global --list
+
+
+6. CONFIGURAR VS CODE COMO EDITOR DE GIT
+========================================
+
+Si durante la instalación se eligió Vim, se puede configurar VS Code
+posteriormente:
+
+git config --global core.editor "code --wait"
+
+Comprobar:
+
+git config --global core.editor
+
+
+7. CREAR UN REPOSITORIO GIT PARA UN PROYECTO
+============================================
+
+Abrir el proyecto en VS Code.
+
+Terminal > New Terminal
+
+Inicializar Git:
+
+git init
+
+Comprobar:
+
+git init
+
+La rama inicial debería ser:
+
+main
+
+
+8. VINCULAR EL PROYECTO CON GITHUB
+==================================
+
+Primero crear el repositorio en GitHub. Después, desde la carpeta del proyecto:
+
+git remote add origin https://github.com/USUARIO/REPOSITORIO.git
+
+Comprobar:
+
+git remote -v
+
+Debe aparecer:
+
+origin  https://github.com/USUARIO/REPOSITORIO.git (fetch)
+origin  https://github.com/USUARIO/REPOSITORIO.git (push)
+
+
+9. PRIMER COMMIT
+================
+
+Agregar los archivos:
+
+git add .
+
+Comprobar:
+
+git status
+
+Crear el commit:
+
+git commit -m "Initial commit"
+
+
+10. SUBIR EL PROYECTO A GITHUB
+==============================
+
+Si la rama es main:
+
+git branch -M main
+
+Subir:
+
+git push -u origin main
+
+A partir de ese momento el proyecto queda vinculado al repositorio remoto.
+
+
+11. TRABAJAR DESDE VS CODE
+==========================
+
+git status
+
+git add .
+
+git commit -m "Descripción del cambio"
+
+git push
+
+git pull
+
+
+12. CLONAR UN PROYECTO EXISTENTE
+================================
+
+Si el proyecto ya existe en GitHub:
+
+git clone https://github.com/USUARIO/REPOSITORIO.git
+
+Después:
+
+cd REPOSITORIO
+
+Abrirlo en VS Code.
+
+
+COMANDOS BÁSICOS DE GIT
+=======================
+
+git status
+    Ver estado del proyecto.
+
+git add .
+    Preparar todos los cambios para el commit.
+
+git commit -m "mensaje"
+    Crear un commit.
+
+git push
+    Subir cambios al repositorio remoto.
+
+git pull
+    Descargar y combinar cambios del remoto.
+
+git clone URL
+    Clonar un repositorio existente.
+
+git remote -v
+    Ver repositorios remotos vinculados.
+
+git branch
+    Ver las ramas.
+
+git checkout nombre-rama
+    Cambiar de rama.
+
+git switch nombre-rama
+    Forma moderna de cambiar de rama.
