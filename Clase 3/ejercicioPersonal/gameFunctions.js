@@ -24,11 +24,6 @@ export const obtenerPersonaje = function (value) {
 
     if (personajeSolicitado) {
 
-        // let personajeSolicitadoFormateado = '';
-        // const personajeSolicitadoArray = Object.entries(personajeSolicitado);
-    
-        // personajeSolicitadoArray.forEach()
-
         return personajeSolicitado;
 
     } else {
@@ -37,5 +32,36 @@ export const obtenerPersonaje = function (value) {
 
     }
 
-    
 };
+
+export const crearPersonaje = function (nombre, clase, nivel, vida, habilidades) {
+    
+    let personajeNuevo = new Object;
+
+    personajeNuevo.nombre = nombre;
+    personajeNuevo.clase = clase;
+    personajeNuevo.nivel = Number(nivel);
+    personajeNuevo.vida = Number(vida);
+    personajeNuevo.habilidades = [habilidades];
+
+    personajes.push(personajeNuevo);
+
+    return personajeNuevo;
+
+}
+
+export const eliminarPersonaje = function (value) {
+    
+     const indice = personajes.findIndex(
+        personaje => personaje.nombre === value);
+    
+    if (indice !== -1) {
+        personajes.splice(indice, 1);
+
+        return "Se eliminó al personaje";
+
+    }
+
+    return "No se eliminó al personaje"
+
+}
