@@ -27,7 +27,7 @@ console.log(multiplicacion(5, 3)); // Output: 15
 
 //---------------------------------------
 
-//HOF (High Order Function):  funcion que recibe otra funcion como argumento o devuelve una funcion como resultado.
+//HOF (High Order Function): funcion que recibe otra funcion como argumento o devuelve una funcion como resultado.
 function calculadora(a, b, operacion) {
     return operacion(a, b);
 }
