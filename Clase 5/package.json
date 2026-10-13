@@ -1,0 +1,23 @@
+{
+  "name": "primer-proyecto-nodejs-npm",
+  "version": "1.0.0",
+  "description": "Este es el 1er proyecto utilizando NodeJS y npm - TalentoTech2026",
+  "keywords": [
+    "Node",
+    "Javascript"
+  ],
+  "license": "ISC",
+  "author": "Ramiro Farias",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "nodemailer": "^10.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

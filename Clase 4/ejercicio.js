@@ -113,3 +113,23 @@ rl.question("Elegí un color: ", respuesta => {
     console.log(autoColorCounter(respuesta));
 })
 
+//-------Resolución del profesor
+function recorrerAutos(autos = [], color_if = false) {
+    if (color_if) {
+        let cantidad = 0;
+
+        autos.forEach((auto) => {
+            const { color } = auto;
+
+            if (color_if.toLowerCase() == color.toLowerCase()) {
+                cantidad++;
+            }
+        });
+
+        console.log(`La cantidad de autos de color ${color_if} es: ${cantidad}`);
+    } else {
+        console.log("Se necesita un color para poder contar");
+    }
+}
+
+recorrerAutos(automoviles, 'azul');
